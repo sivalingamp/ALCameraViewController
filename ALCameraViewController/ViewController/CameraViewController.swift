@@ -33,6 +33,7 @@ public extension CameraViewController {
                     }
                 }
                 confirmController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                confirmController.modalPresentationStyle = .fullScreen
                 imagePicker?.present(confirmController, animated: true, completion: nil)
             } else {
                 completion(nil, nil)
@@ -588,6 +589,7 @@ open class CameraViewController: UIViewController {
 			self?.onCompletion = nil
 		}
 		confirmViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        confirmViewController.modalPresentationStyle = .fullScreen
 		present(confirmViewController, animated: true, completion: nil)
 	}
 	
@@ -607,6 +609,7 @@ open class CameraViewController: UIViewController {
             self?.onCompletion = nil
         }
         confirmViewController.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+        confirmViewController.modalPresentationStyle = .fullScreen
         present(confirmViewController, animated: true, completion: nil)
     }
 
